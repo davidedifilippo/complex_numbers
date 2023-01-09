@@ -1,4 +1,4 @@
-mport numpy as np
+import numpy as np
 
 c1_M = input("Inserire il modulo del numero complesso: ")
 c1_phi = input("Inserire la fase del numero complesso in gradi: ")
@@ -19,7 +19,7 @@ print("x=", c1.imag)
 
 print("Coordinate polari: ")
 print("Modulo=", c1_M)
-print("Angolo=", (c1_phi/np.pi) * 180)
+print("Angolo=", c1_phi)
 
 
 
