@@ -1,6 +1,6 @@
 # Plotting phasors on gauss plane
 
-      from complex_plane import complex_plane2
+     from complex_plane import complex_plane2
       
 if you have a complex number c1:
 
