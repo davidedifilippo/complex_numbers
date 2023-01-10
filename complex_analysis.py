@@ -17,7 +17,7 @@ print("Numero inserito: ", c1)
 
 print("Coordinate cartesiane: ")
 print("x=", c1_x)
-print("x=", c1_y)
+print("y=", c1_y)
 
 print("Coordinate polari: ")
 print("Modulo=", c1_M)
