@@ -1,5 +1,5 @@
 import numpy as np
-from complex_plane import complex_plane2
+from complex_plane/complex_plane import complex_plane2
 
 c1 = input("Inserire un numero complesso: ")
 c1 = complex(c1)
