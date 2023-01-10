@@ -3,14 +3,17 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 f = 10000 # frequency - Hertz 
-C= 10*pow(10, -6) # Capacity microFarad
+L= 10*pow(10, -3) # Inductance in milliHenry
 
-Z_C = (1/(1j*2*math.pi*f*C)
-Vout = 10
-Ic = Vout/Z_C
+Z_L = 1j*2*math.pi*f*L
 
-print('Capacitor Impedance = {:.2f} Ω'.format(Z_C))
-print('Current = {:.2f} Ω'.format(Ic))
+VL = input("Inserire la tensione complessa: ")
+VL = complex(V)
+
+IL = VL/Z_L
+
+print('Capacitor Impedance = {:.2f} Ω'.format(Z_L))
+print('Current = {:.2f} Ω'.format(IL))
 
 # Plotting Phasor Diagram
 
@@ -18,7 +21,7 @@ figure = plt.subplots(figsize=(11, 6))
 axe = plt.subplot(121)
 
 plt.title('V Phasor Diagram')
-axe.quiver(0, 0, np.array((np.real(Vout))), np.array((np.imag(Vout))), units='xy', scale=1, color='blue')
+axe.quiver(0, 0, np.array((np.real(VL))), np.array((np.imag(VL))), units='xy', scale=1, color='blue')
 
 
 plt.grid()
@@ -28,16 +31,16 @@ axe.spines['right'].set_color('none')
 axe.spines['bottom'].set_position('zero')
 axe.spines['top'].set_color('none')
 
-limit = abs(Vout)
+limit = abs(VL)
 plt.xlim(-limit,limit)
 plt.ylim(-limit,limit)
-plt.legend("V")
+plt.legend("VL")
 
 
 axe = plt.subplot(122)
 
 plt.title('I Phasor Diagram ')
-axe.quiver(0, 0, np.array((np.real(Ic))), np.array((np.imag(Ic))), units='xy', scale=1, color='orange')
+axe.quiver(0, 0, np.array((np.real(IL))), np.array((np.imag(IL))), units='xy', scale=1, color='orange')
 
 
 plt.grid()
@@ -47,10 +50,10 @@ axe.spines['right'].set_color('none')
 axe.spines['bottom'].set_position('zero')
 axe.spines['top'].set_color('none')
 
-limit = abs(Ic)
+limit = abs(IL)
 plt.xlim(-limit,limit)
 plt.ylim(-limit,limit)
-plt.legend("I")
+plt.legend("IL")
 
 
 plt.tight_layout()
