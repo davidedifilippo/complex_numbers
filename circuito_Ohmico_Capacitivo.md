@@ -41,6 +41,7 @@ Si calcola la corrente utilizzando al egge di Ohm generalizzata:
       Vc = Zc*I
       VR = R*I
  
+      complex_plane2([c1])
  
 
  
