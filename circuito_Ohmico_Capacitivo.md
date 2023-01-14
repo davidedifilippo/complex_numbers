@@ -40,7 +40,7 @@ Si calcola la corrente utilizzando al egge di Ohm generalizzata:
  
       Vc = Zc*I
       VR = R*I
-      
+ 
  
 
  
