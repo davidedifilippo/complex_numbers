@@ -34,7 +34,13 @@ Si calcola la corrente utilizzando al egge di Ohm generalizzata:
 
       I= tensione / Zserie
       
- Passiamo ora a disegnare nel tempo la tensione e la corrente:
+ Calcoliamo la tensione sul condensatore e sulla resistenza:
+ 
+      Vc = Zc*I
+      VR = R*I
+      
+ 
+ 
  
  
 
