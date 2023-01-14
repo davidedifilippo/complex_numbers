@@ -1,6 +1,8 @@
 Importiamo la libreria numpy:     
      
      import numpy as np
+     from complex_plane import complex_plane2
+ 
 
 Diamo la possibilità di inserire la frequenza di lavoro, la resistenza e la capacità del condensatore:
 
@@ -40,7 +42,6 @@ Si calcola la corrente utilizzando al egge di Ohm generalizzata:
       VR = R*I
       
  
- 
- 
+
  
 
