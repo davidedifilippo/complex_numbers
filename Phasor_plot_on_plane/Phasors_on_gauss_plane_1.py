@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 c1 = input("Inserire i dati del fasore: ")
 c1 = complex(c1)
 
-c1 = 10j
+#ad esempio c1 = 10j
 
 
 # Plotting Phasor Diagram
