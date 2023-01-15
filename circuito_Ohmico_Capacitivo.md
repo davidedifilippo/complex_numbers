@@ -9,13 +9,15 @@ Diamo la possibilità di inserire la frequenza di lavoro, la resistenza e la cap
     frequenza = input("Inserire la frequenza di lavoro:")
     frequenza = float(frequenza)
     
-    tensione = input("Inserire la tensione di alimentazione:")
-    tensione = float(tensione)
+    VG_MAX = input("Inserire la tensione di alimentazione:")
+    VG_MAX = float(tensione)
     
-    tensione = input("Inserire la fase del generatore:")
-    tensione = float(tensione)
+    VG_ph = input("Inserire la fase del generatore:")
+    VG_ph = float(tensione)
     
-    frequenza = input("Inserire la resistenza:")
+    VG = VG_MAX * ((np.cos(VG_ph)+ (np.cos(VG_ph)*1j)
+    
+    resistenza = input("Inserire la resistenza:")
     resistenza = float(resistenza)
     
     capacità = input("Inserire la capacità in microfarad:")
@@ -26,7 +28,9 @@ Bisogna determinare l'impedenza resistiva e l'impedenza capacitiva:
  
       ZR = R
       
-      ZC = -1j*C
+      XC = 1/(2*np.pi*frequenza*C)
+      
+      ZC = -1j*XC
  
 Poi calcoliamo l'impedenza serie vista dal generatore:
 
@@ -34,14 +38,16 @@ Poi calcoliamo l'impedenza serie vista dal generatore:
       
 Si calcola la corrente utilizzando al egge di Ohm generalizzata:
 
-      I= tensione / Zserie
+      I= VG / Zserie
       
  Calcoliamo la tensione sul condensatore e sulla resistenza:
  
-      Vc = Zc*I
+      VC = ZC*I
       VR = R*I
+      
+   Disegnamo i fasori sul piano complesso:
  
-      complex_plane2([c1])
+      complex_plane2([VG, VR, VC, IC])
  
 
  
