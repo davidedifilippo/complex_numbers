@@ -15,7 +15,7 @@ figure = plt.subplots(figsize=(11, 6))
 axe = plt.subplot(121)
 
 plt.title('Phasor Diagram')
-axe.quiver(0, 0, np.array((np.real(Vout))), np.array((np.imag(Vout))), units='xy', scale=1, color='red')
+axe.quiver(0, 0, np.array((np.real(c1))), np.array((np.imag(c1))), units='xy', scale=1, color='red')
 
 
 plt.grid()
