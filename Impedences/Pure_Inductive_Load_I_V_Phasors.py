@@ -8,7 +8,7 @@ L= 10*pow(10, -3) # Inductance in milliHenry
 Z_L = 1j*2*math.pi*f*L
 
 VL = input("Inserire la tensione complessa: ")
-VL = complex(V)
+VL = complex(VL)
 
 IL = VL/Z_L
 
