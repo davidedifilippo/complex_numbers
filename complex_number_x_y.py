@@ -1,7 +1,7 @@
 import numpy as np
 
 
-c1 = input("Inserire un numero complesso: ")
+c1 = input("Inserire un numero complesso in forma cartesiana (a+bj): ")
 c1 = complex(c1)
 
 # Coordinate cartesiane del numero
