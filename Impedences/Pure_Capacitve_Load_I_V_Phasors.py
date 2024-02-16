@@ -8,10 +8,9 @@ Vc = complex(Vc)
 
 f = 10000 # frequency - Hertz
 
-C= 10*pow(10, -6) # Capacity microFarad
+C = 10*pow(10, -6) # Capacity microFarad
 
-Z_C = (1/(1j*2*math.pi*f*C)
-
+Z_C = (1/(1j*2*math.pi*f*C))
 
 Ic = Vc/Z_C
 
@@ -34,7 +33,7 @@ axe.spines['right'].set_color('none')
 axe.spines['bottom'].set_position('zero')
 axe.spines['top'].set_color('none')
 
-limit = abs(Vout)
+limit = abs(Vc)
 plt.xlim(-limit,limit)
 plt.ylim(-limit,limit)
 plt.legend("Vc")
