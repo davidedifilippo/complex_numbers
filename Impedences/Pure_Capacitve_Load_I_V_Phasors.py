@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 Vc = input("Inserire la tensione complessa: ")
+#converte la stringa inserita in un numero complesso
 Vc = complex(Vc)
 
 
@@ -10,9 +11,11 @@ f = 10000 # frequency - Hertz
 
 C = 10*pow(10, -6) # Capacity microFarad
 
+#impedenza capacitiva: Zc = 1/(j omega C)
 Z_C = (1/(1j*2*math.pi*f*C))
 
-Ic = Vc/Z_C
+#Applico la legge di Ohm
+Ic = Vc/Z_C  
 
 print('Capacitor Impedance = {:.2f} Ω'.format(Z_C))
 print('Current = {:.2f} Ω'.format(Ic))
